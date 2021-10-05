@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Gotham';
-    src: url('res/GothamMedium.ttf') format('truetype');
+    src: url('res/Gotham-Book.ttf') format('truetype');
     font-weight: normal;
 }
 
@@ -17,17 +17,19 @@
     user-select: none;
     transition: all 0.25s linear;
     font-weight: normal;
+    --light: #ECE7DF;
+    --dark: #cd966d;
+    --darker: #534e41;
 }
 
 body {
-    background-color: #ECE7DF;
+    background-color: var(--light);
     width: 100%;
     font-size: 18px;
 }
 
 section {
-    margin-bottom: 30px;
-    padding: 10px;
+    padding: 50px 10px;
 }
 
 .section__container {
@@ -39,17 +41,24 @@ p, a, button, ol, ul, li, textarea, input, summary {
     font-size: 18px;
 }
 
+li {
+    margin: 10px 0 10px 20px;
+}
+
+p, details {
+    margin: 10px 0;
+}
+
 h1, h2, h3, h4 {
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 s {
-    font-size: 22px;
     margin-bottom: 20px;
 }
 
 u {
-    color: #cd966d;
+    color: var(--dark);
 }
 
 .intro {
@@ -59,7 +68,7 @@ u {
     justify-content: center;
     position: relative;
     font-size: 36px;
-    color: #ECE7DF;
+    color: var(--light);
     text-align: center;
 }
 
@@ -74,5 +83,31 @@ u {
     object-fit: cover;
 }
 
-.intro__feature {
+.about {
+    background-color: var(--darker);
+    color: var(--light);
+}
+
+.about__heading {
+    text-align: center;
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.contact {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact__img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 15px;
 }
