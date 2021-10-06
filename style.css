@@ -54,6 +54,7 @@ h1, h2, h3, h4 {
 
 u {
     color: var(--dark);
+    font-weight: bold;
 }
 
 s {
@@ -66,13 +67,27 @@ sup {
     color: var(--dark);
 }
 
+.center {
+    text-align: center;
+    font-weight: bold;
+}
+
+.right {
+    text-align: right;
+}
+
+.invert {
+    background-color: var(--darker);
+    color: var(--light);
+}
+
 .intro {
     height: calc(100vh - 40px);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    font-size: 36px;
+    font-size: 28px;
     color: var(--light);
     text-align: center;
 }
@@ -86,6 +101,10 @@ sup {
     left: 0;
     z-index: -1;
     object-fit: cover;
+}
+
+.targeting {
+    padding: 50px 15px 0 15px;
 }
 
 .targeting__text {
@@ -105,6 +124,10 @@ sup {
     max-width: 300px;
     color: var(--light);
     background-color: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .slider {
@@ -114,7 +137,7 @@ sup {
     margin: 0 auto;
 }
   
-  .slide {
+.slide {
     margin: 20px auto;
     width: 100%;
     height: 500px;
@@ -124,9 +147,9 @@ sup {
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
-  }
+}
   
-  .prev, .next {
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 99%;
@@ -141,58 +164,79 @@ sup {
     width: 44px;
     height: 44px;
     text-align: center;
-  }
+}
   
-  .prev {
+.prev {
     left: 0;
-  }
+}
 
-  .next {
+.next {
     right: 0;
-  }
+}
   
-  .dots {
+.dots {
     display: flex;
     justify-content: center;
     margin: 10px 0 40px 0;
-  }
+}
 
-  .dot {
+.dot {
     height: 15px;
     width: 15px;
     margin: 0 3px;
-    background-color: var(--light);
+    background-color: var(--dark);
     border-radius: 50%;
     transition: background-color 0.6s ease;
-  }
+}
   
-  .active {
-    background-color: var(--dark);
-  }
+.active {
+    background-color: var(--darker);
+}
   
-  @-webkit-keyframes fade {
+@-webkit-keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
-  }
+}
   
-  @keyframes fade {
+@keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
-  }
-
+}
 
 .pro {
     font-weight: bold;
     margin: 20px;
 }
 
-.invert {
-    background-color: var(--darker);
-    color: var(--light);
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 30px;
+    justify-content: center;
 }
 
-.heading {
-    text-align: center;
+.item__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.item {
+    padding: 15px 40px;
+    border-radius: 40px;
+    width: 400px;
+    color: var(--light);
+    background-color: var(--dark);
+    font-size: 17px;
+    margin: 0 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item_big {
+    height: calc(100% - 20px);
 }
 
 .contacts {
