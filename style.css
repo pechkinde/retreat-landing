@@ -220,6 +220,7 @@ sup {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    position: relative;
 }
 
 .item {
@@ -237,6 +238,21 @@ sup {
 
 .item_big {
     height: calc(100% - 10px);
+}
+
+@media (max-width: 860px) {
+    .day_2 {
+        position: relative;
+        top: -380px;
+        left: 0;
+        height: auto;
+    }
+    .day_3 {
+        position: relative;
+        top: 575px;
+        left: 0;
+        height: auto;
+    }
 }
 
 .contacts {
