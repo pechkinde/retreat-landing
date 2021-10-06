@@ -236,7 +236,7 @@ sup {
 }
 
 .item_big {
-    height: calc(100% - 20px);
+    height: calc(100% - 10px);
 }
 
 .contacts {
