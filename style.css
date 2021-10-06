@@ -32,20 +32,16 @@
 body {
     background-color: var(--light);
     width: 100%;
-    font-size: 18px;
+    font-size: 19px;
 }
 
 section {
-    padding: 50px 10px;
+    padding: 50px 15px;
 }
 
 .section__container {
     max-width: 1000px;
     margin: 0 auto;
-}
-
-p, a, button, ol, ul, li, textarea, input, summary {
-    font-size: 18px;
 }
 
 p, details, li {
@@ -63,6 +59,11 @@ u {
 s {
     color: var(--darker);
     font-weight: bold;
+}
+
+sup {
+    font-size: 30px;
+    color: var(--dark);
 }
 
 .intro {
@@ -107,22 +108,82 @@ s {
 }
 
 .slider {
-    display: flex;
-    justify-content: center;
-}
-
-.slider__img {
-    margin: 20px auto;
+    position: relative;
     width: 100%;
     max-width: 700px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 25px;
+    margin: 0 auto;
 }
+  
+  .slide {
+    margin: 20px auto;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 99%;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 10vw;
+    transition: 0.6s ease;
+    color: var(--light);
+    background-color: var(--dark);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+  }
+  
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+  
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 40px 0;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 3px;
+    background-color: var(--light);
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: var(--dark);
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
 
 .pro {
     font-weight: bold;
-    margin: 20px 0;
+    margin: 20px;
 }
 
 .invert {
@@ -144,7 +205,6 @@ s {
 .contact {
     max-width: 400px;
     width: 100%;
-    border-radius: 10px;
     margin: 30px 0;
 }
 
