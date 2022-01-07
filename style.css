@@ -16,13 +16,11 @@
   }
 
   * {
-    font-family: Montserrat, sans-serif;
+    font-family: Montserrat;
     margin: 0;
     padding: 0;
     border: 0;
     outline: none;
-    box-sizing: border-box;
-    background-color: transparent;
     text-decoration: none;
   }
 }
